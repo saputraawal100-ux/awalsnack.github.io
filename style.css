@@ -92,4 +92,96 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 40px;
+    .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.quantity-control button {
+    background-color: #ffb347;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.quantity-control button:hover {
+    background-color: #ffa726;
+}
+/* --- Header dengan logo --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffb347;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;   /* kamu bisa ubah ukurannya di sini */
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%; /* kalau mau logo bulat, hapus kalau tidak perlu */
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.cart-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* --- Header dengan logo --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffb347;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;   /* kamu bisa ubah ukurannya di sini */
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%; /* kalau mau logo bulat, hapus kalau tidak perlu */
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.cart-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
 }
