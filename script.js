@@ -3,6 +3,7 @@ const products = [
     { id: 2, name: "Keripik Pisang", price: 18000, img: "2.jpg" },
     { id: 3, name: "Keripik Tempe", price: 10000, img: "3.jpeg" },
     { id: 4, name: "Keripik Singkong", price: 13000, img: "4.jpeg" },
+    { id: 5, name: "Keripik Talas", price: 20000, img: "5.jpg" },
 ];
 
 let cart = [];
@@ -15,7 +16,7 @@ const cartSection = document.getElementById("cart-section");
 const paymentSection = document.getElementById("payment-section");
 const paymentSuccess = document.getElementById("payment-success");
 
-// Tampilkan produk
+// --- Tampilkan Produk ---
 products.forEach(p => {
     const div = document.createElement("div");
     div.classList.add("product");
@@ -28,6 +29,7 @@ products.forEach(p => {
     productList.appendChild(div);
 });
 
+// --- Tambahkan ke Keranjang ---
 function addToCart(id) {
     const product = products.find(p => p.id === id);
     const item = cart.find(i => i.id === id);
@@ -42,6 +44,7 @@ function addToCart(id) {
     cartSection.classList.remove("hidden");
 }
 
+// --- Update Keranjang ---
 function updateCart() {
     cartItems.innerHTML = "";
     let total = 0;
@@ -49,7 +52,17 @@ function updateCart() {
     cart.forEach(item => {
         total += item.price * item.qty;
         const li = document.createElement("li");
-        li.innerHTML = `${item.name} x ${item.qty} - Rp ${(item.price * item.qty).toLocaleString()}`;
+        li.innerHTML = `
+            <div class="cart-item">
+                <span>${item.name}</span>
+                <div class="quantity-control">
+                    <button class="decrease" onclick="changeQty(${item.id}, -1)">-</button>
+                    <span>${item.qty}</span>
+                    <button class="increase" onclick="changeQty(${item.id}, 1)">+</button>
+                </div>
+                <span>Rp ${(item.price * item.qty).toLocaleString()}</span>
+            </div>
+        `;
         cartItems.appendChild(li);
     });
 
@@ -57,11 +70,31 @@ function updateCart() {
     cartTotal.textContent = total.toLocaleString();
 }
 
+// --- Ubah Jumlah Produk (+ atau -) ---
+function changeQty(id, delta) {
+    const item = cart.find(i => i.id === id);
+    if (!item) return;
+
+    item.qty += delta;
+
+    if (item.qty <= 0) {
+        cart = cart.filter(i => i.id !== id);
+    }
+
+    updateCart();
+
+    if (cart.length === 0) {
+        cartSection.classList.add("hidden");
+    }
+}
+
+// --- Checkout ---
 document.getElementById("checkout-btn").addEventListener("click", () => {
     paymentSection.classList.remove("hidden");
     cartSection.classList.add("hidden");
 });
 
+// --- Form Pembayaran ---
 document.getElementById("payment-form").addEventListener("submit", e => {
     e.preventDefault();
     paymentSuccess.classList.remove("hidden");
