@@ -6,12 +6,12 @@ body {
 }
 
 header {
-    background-color: #ffaf6d;
-    color: white;
+    background-color: #BADFDB;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 15px;
+    padding: 10px 10px;
     font-size: 1.4rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -87,7 +87,7 @@ button:hover {
 }
 
 footer {
-    background-color: #ffaf6d;
+    background-color: #BADFDB;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -118,15 +118,7 @@ footer {
 .quantity-control button:hover {
     background-color: #ffa726;
 }
-header {
-    position: relative;
-    background-color: #ffb347;
-    padding: 4px 15px;  /* Padding lebih kecil */
-    color: #fff;
-    text-align: center;
-    line-height: 1;     /* Kurangi jarak baris */
-    height: auto;       /* Pastikan height otomatis */
-}
+
 }
 
 
@@ -138,7 +130,7 @@ header {
 }
 
 .logo {
-    width: 150px;       /* Lebih kecil */
+    width: 140px;       /* Lebih kecil */
     height: auto;
     object-fit: contain;
     margin-bottom: 10px; /* Lebih rapat ke teks */
