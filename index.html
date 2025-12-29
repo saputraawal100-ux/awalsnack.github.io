@@ -33,7 +33,10 @@
       "name": "Awal Snack",
       "url": "https://saputraawal100-ux.github.io/awalsnack.github.io/",
       "logo": "https://saputraawal100-ux.github.io/awalsnack.github.io/6.png",
-      "image": "https://saputraawal100-ux.github.io/awalsnack.github.io/6.png",
+      "image": [
+        "https://saputraawal100-ux.github.io/awalsnack.github.io/6.png",
+        "https://saputraawal100-ux.github.io/awalsnack.github.io/produk2.png"
+      ],
       "description": "Awal Snack merupakan usaha UMKM cemilan kekinian yang menyediakan snack enak, higienis, dan berkualitas.",
       "address": {
         "@type": "PostalAddress",
@@ -56,47 +59,67 @@
 </head>
 
 <body>
+
 <header>
     <div class="logo-container">
         <img src="6.png" alt="Logo Awal Snack" class="logo">
-        <h1>Awal Snack – Cemilan Kekinian UMKM</h1>
+        <h1>AWAL SNACK</h1>
+    </div>
+    <div class="cart-icon">
+        🛒 <span id="cart-count">0</span>
     </div>
 </header>
 
 <main>
 
-    <!-- ABOUT (WAJIB UNTUK SEO) -->
+    <!-- ABOUT -->
     <section class="about">
         <h2>Tentang Awal Snack</h2>
         <p>
             Awal Snack adalah usaha UMKM yang bergerak di bidang cemilan kekinian dengan
-            fokus pada kualitas rasa, kebersihan, dan harga terjangkau. Produk Awal Snack
-            dibuat dari bahan pilihan dan cocok untuk berbagai kalangan, baik anak muda
-            maupun keluarga.
+            cita rasa enak, higienis, dan harga terjangkau. Produk kami dibuat dari bahan
+            berkualitas dan cocok untuk semua kalangan.
         </p>
         <p>
-            Dengan memanfaatkan platform digital, Awal Snack berkomitmen menghadirkan
-            layanan pemesanan yang mudah dan cepat. Website ini dikembangkan sebagai
-            sarana informasi dan penjualan sekaligus media untuk memperkenalkan usaha
-            kepada calon investor.
+            Website ini dikembangkan sebagai media informasi dan penjualan online sekaligus
+            sarana untuk memperkenalkan profil usaha Awal Snack kepada calon investor.
         </p>
     </section>
 
-    <!-- PRODUK -->
+    <!-- PRODUK (TANPA JUDUL) -->
     <section id="products" class="product-list">
-        <h2>Produk Cemilan Unggulan</h2>
-        <!-- produk dari JS -->
     </section>
 
-    <!-- KEUNGGULAN -->
-    <section class="benefits">
-        <h2>Kenapa Memilih Awal Snack?</h2>
-        <ul>
-            <li>Cemilan kekinian dengan rasa enak</li>
-            <li>Produk UMKM lokal berkualitas</li>
-            <li>Harga terjangkau</li>
-            <li>Proses pemesanan mudah</li>
-        </ul>
+    <!-- CART -->
+    <section id="cart-section" class="cart-section hidden">
+        <h2>Keranjang Belanja</h2>
+        <ul id="cart-items"></ul>
+        <p class="total">Total: Rp <span id="cart-total">0</span></p>
+        <button id="checkout-btn">Lanjut ke Pembayaran</button>
+    </section>
+
+    <!-- PAYMENT -->
+    <section id="payment-section" class="payment-section hidden">
+        <h2>Form Pembayaran</h2>
+        <form id="payment-form">
+            <label>Nama Lengkap:</label>
+            <input type="text" id="name" required>
+
+            <label>Alamat Pengiriman:</label>
+            <textarea id="address" required></textarea>
+
+            <label>Metode Pembayaran:</label>
+            <select id="payment-method">
+                <option value="transfer">Transfer Bank</option>
+                <option value="ewallet">E-Wallet</option>
+                <option value="cod">Cash on Delivery (COD)</option>
+            </select>
+
+            <button type="submit">Bayar Sekarang</button>
+        </form>
+        <p id="payment-success" class="hidden success-msg">
+            ✅ Pembayaran Berhasil! Terima kasih telah berbelanja 🍪
+        </p>
     </section>
 
 </main>
