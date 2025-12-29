@@ -6,21 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="QGzSSxT8K63L4QTG7zWg83u9ZNuHDsKMd_9SzZ8FqfU" />
+    <meta name="google-site-verification" content="QGzSSxT8K63L4QTG7zWg83u9ZNuHDsKMd_9SzZ8FqfU">
 
     <!-- SEO Meta -->
-    <title>Awal Snack | Cemilan Enak, Kekinian & Berkualitas</title>
-    <meta name="description" content="Awal Snack adalah usaha cemilan lokal yang menyediakan snack enak, kekinian, dan berkualitas dengan harga terjangkau.">
-    <meta name="keywords" content="Awal Snack, cemilan enak, snack kekinian, UMKM snack, cemilan lokal">
+    <title>Awal Snack | Cemilan Kekinian UMKM Berkualitas</title>
+    <meta name="description" content="Awal Snack adalah usaha UMKM cemilan kekinian yang menyediakan snack enak, higienis, dan berkualitas dengan harga terjangkau.">
+    <meta name="keywords" content="Awal Snack, cemilan kekinian, snack lokal, UMKM cemilan, cemilan online">
     <meta name="author" content="Awal Snack">
     <meta name="robots" content="index, follow">
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://saputraawal100-ux.github.io/awalsnack.github.io/">
+
     <!-- Open Graph Meta -->
-    <meta property="og:title" content="Awal Snack | Cemilan Enak Rasa Ketagihan">
-    <meta property="og:description" content="Cemilan lokal berkualitas dengan rasa enak dan harga terjangkau.">
+    <meta property="og:title" content="Awal Snack | Cemilan Kekinian & Berkualitas">
+    <meta property="og:description" content="UMKM cemilan lokal dengan rasa enak dan harga terjangkau.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://awalsnack.github.io">
-    <meta property="og:image" content="https://awalsnack.github.io/6.png">
+    <meta property="og:url" content="https://saputraawal100-ux.github.io/awalsnack.github.io/">
+    <meta property="og:image" content="https://saputraawal100-ux.github.io/awalsnack.github.io/6.png">
 
     <!-- Schema Rich Snippet JSON-LD -->
     <script type="application/ld+json">
@@ -28,9 +31,10 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Awal Snack",
-      "url": "https://awalsnack.github.io",
-      "image": "https://awalsnack.github.io/6.png",
-      "description": "Usaha cemilan lokal yang menyediakan snack enak, kekinian, dan berkualitas.",
+      "url": "https://saputraawal100-ux.github.io/awalsnack.github.io/",
+      "logo": "https://saputraawal100-ux.github.io/awalsnack.github.io/6.png",
+      "image": "https://saputraawal100-ux.github.io/awalsnack.github.io/6.png",
+      "description": "Awal Snack merupakan usaha UMKM cemilan kekinian yang menyediakan snack enak, higienis, dan berkualitas.",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "ID"
@@ -52,57 +56,55 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="6.png" alt="Logo Awal Snack" class="logo">
-            <h1>AWAL SNACK</h1>
-        </div>
-        <div class="cart-icon">
-            🛒 <span id="cart-count">0</span>
-        </div>
-    </header>
+<header>
+    <div class="logo-container">
+        <img src="6.png" alt="Logo Awal Snack" class="logo">
+        <h1>Awal Snack – Cemilan Kekinian UMKM</h1>
+    </div>
+</header>
 
-    <main>
-        <section id="products" class="product-list"></section>
+<main>
 
-        <section id="cart-section" class="cart-section hidden">
-            <h2>Keranjang Belanja</h2>
-            <ul id="cart-items"></ul>
-            <p class="total">Total: Rp <span id="cart-total">0</span></p>
-            <button id="checkout-btn">Lanjut ke Pembayaran</button>
-        </section>
+    <!-- ABOUT (WAJIB UNTUK SEO) -->
+    <section class="about">
+        <h2>Tentang Awal Snack</h2>
+        <p>
+            Awal Snack adalah usaha UMKM yang bergerak di bidang cemilan kekinian dengan
+            fokus pada kualitas rasa, kebersihan, dan harga terjangkau. Produk Awal Snack
+            dibuat dari bahan pilihan dan cocok untuk berbagai kalangan, baik anak muda
+            maupun keluarga.
+        </p>
+        <p>
+            Dengan memanfaatkan platform digital, Awal Snack berkomitmen menghadirkan
+            layanan pemesanan yang mudah dan cepat. Website ini dikembangkan sebagai
+            sarana informasi dan penjualan sekaligus media untuk memperkenalkan usaha
+            kepada calon investor.
+        </p>
+    </section>
 
-        <section id="payment-section" class="payment-section hidden">
-            <h2>Form Pembayaran</h2>
-            <form id="payment-form">
-                <label>Nama Lengkap:</label>
-                <input type="text" id="name" required>
+    <!-- PRODUK -->
+    <section id="products" class="product-list">
+        <h2>Produk Cemilan Unggulan</h2>
+        <!-- produk dari JS -->
+    </section>
 
-                <label>Alamat Pengiriman:</label>
-                <textarea id="address" required></textarea>
+    <!-- KEUNGGULAN -->
+    <section class="benefits">
+        <h2>Kenapa Memilih Awal Snack?</h2>
+        <ul>
+            <li>Cemilan kekinian dengan rasa enak</li>
+            <li>Produk UMKM lokal berkualitas</li>
+            <li>Harga terjangkau</li>
+            <li>Proses pemesanan mudah</li>
+        </ul>
+    </section>
 
-                <label>Metode Pembayaran:</label>
-                <select id="payment-method">
-                    <option value="transfer">Transfer Bank</option>
-                    <option value="ewallet">E-Wallet</option>
-                    <option value="cod">Cash on Delivery (COD)</option>
-                </select>
+</main>
 
-                <button type="submit">Bayar Sekarang</button>
-            </form>
-            <p id="payment-success" class="hidden success-msg">
-                ✅ Pembayaran Berhasil! Terima kasih telah berbelanja 🍪
-            </p>
-        </section>
-    </main>
+<footer>
+    <p>© 2025 Awal Snack – Cemilan Kekinian UMKM Indonesia</p>
+</footer>
 
-    <footer>
-        <p>© 2025 Awal Snack - Cemilan Enak Rasa Ketagihan!</p>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-
-
-
