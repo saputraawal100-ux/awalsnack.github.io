@@ -1,134 +1,352 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <!-- Basic Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PORTOFOLIO AWAL</title>
+        <link rel="stylesheet" href="tooplate-graphite-creative.css">
 
-    <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="QGzSSxT8K63L4QTG7zWg83u9ZNuHDsKMd_9SzZ8FqfU">
+        <style>
+            
+     /* FOTO BERANDA SEDANG & TIDAK TERPOTONG */
+.slide img {
+    width: 1200px;
+    height: 500px;          /* lebih kecil (sedang) */
+    object-fit: contain;    /* tidak terpotong */
+    border-radius: 10px;
+}
 
-    <!-- SEO Meta -->
-    <title>Awal Snack | Cemilan Kekinian UMKM Berkualitas</title>
-    <meta name="description" content="Awal Snack adalah usaha UMKM cemilan kekinian yang menyediakan snack enak, higienis, dan berkualitas dengan harga terjangkau.">
-    <meta name="keywords" content="Awal Snack, cemilan kekinian, snack lokal, UMKM cemilan, cemilan online">
-    <meta name="author" content="Awal Snack">
-    <meta name="robots" content="index, follow">
+/* SAMAKAN SEMUA GAMBAR PORTFOLIO */
+.portfolio-item img {
+    width: 100%;
+    height: 250px;       /* samakan tinggi */
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://saputraawal100-ux.github.io/awalsnack.github.io/">
+    border-radius: 10px;
+}
+    
 
-    <!-- Open Graph Meta -->
-    <meta property="og:title" content="Awal Snack | Cemilan Kekinian & Berkualitas">
-    <meta property="og:description" content="UMKM cemilan lokal dengan rasa enak dan harga terjangkau.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://saputraawal100-ux.github.io/awalsnack.github.io/">
-    <meta property="og:image" content="https://saputraawal100-ux.github.io/awalsnack.github.io/6.png">
-
-    <!-- Schema Rich Snippet JSON-LD -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Awal Snack",
-      "url": "https://saputraawal100-ux.github.io/awalsnack.github.io/",
-      "logo": "https://saputraawal100-ux.github.io/awalsnack.github.io/6.png",
-      "image": [
-        "https://saputraawal100-ux.github.io/awalsnack.github.io/6.png",
-        "https://saputraawal100-ux.github.io/awalsnack.github.io/produk2.png"
-      ],
-      "description": "Awal Snack merupakan usaha UMKM cemilan kekinian yang menyediakan snack enak, higienis, dan berkualitas.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "ID"
-      }
+    /* CONTACT TENGAH */
+    .contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
-    </script>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    .contact-info {
+        text-align: center;
+    }
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0KP93EYY8F"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-0KP93EYY8F');
-    </script>
-</head>
+    /* ICON LEBIH BESAR */
+    .contact-item img {
+        width: 70px;   /* sebelumnya 40px */
+        transition: 0.3s;
+        cursor: pointer;
+        margin-top: 10px;
+    }
 
-<body>
+    .contact-item img:hover {
+        transform: scale(1.2);
+    }
 
-<header>
-    <div class="logo-container">
-        <img src="6.png" alt="Logo Awal Snack" class="logo">
-        <h1>AWAL SNACK</h1>
+    /* RAPIKAN JARAK */
+    .contact-details {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 20px;
+    }
+
+
+
+
+
+
+    /* TAMBAHAN GRID SKILL */
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+            
+            /* UKURAN SEDANG */
+            body {
+                font-size: 15px;
+            }
+
+            h1 { font-size: 24px; }
+            h2 { font-size: 20px; }
+            h3 { font-size: 17px; }
+
+            p {
+                font-size: 30px;
+                line-height: 1.7;
+                color: rgba(5, 218, 5, 0.829);
+            }
+
+            .service-number {
+                font-size: 18px;
+                opacity: 0.7;
+            }
+
+            /* CONTACT */
+            .contact-details {
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+                margin-top: 20px;
+            }
+
+            .contact-item {
+                text-align: center;
+            }
+
+            .contact-item img {
+                transition: 0.3s;
+                cursor: pointer;
+                margin-top: 5px;
+            }
+
+            .contact-item img:hover {
+                transform: scale(1.2);
+            }
+/* SAMAKAN GRID SKILL & PROJECT */
+#portfolio .portfolio-grid,
+#about .portfolio-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    width: 100%;
+}
+
+/* HILANGKAN PENGARUH STYLE TEMPLATE */
+#about .portfolio-container {
+    all: unset;
+}
+
+/* BIKIN LEBAR SAMA */
+#about .portfolio-grid {
+    max-width: 1000px;
+    margin: auto;
+}
+        </style>
+    </head>
+
+    <body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo-area" onclick="scrollToTop(); return false;">
+                <div class="logo-vector">PA</div>
+                <div class="logo-text">
+                    <h1>SELAMAT DATANG DI PORTOFOLIO AWAL</h1>
+                    <p>SALAM KENAL</p>
+                </div>
+            </a>
+
+            <nav>
+                <a href="#home" class="active">Beranda</a>
+                <a href="#services">Tentang Saya</a>
+                <a href="#portfolio">Skill (Kemampuan) </a>
+                <a href="#about">Portofolio Project</a>
+                <a href="#contact">Kontak Saya</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+    <!-- HERO -->
+    <section id="home" class="section-hero">
+        <div class="hero-container">
+            <div class="hero-left">
+                <div class="hero-line"></div>
+                <h2>BERANDA</h2>
+                <p>Halo Semuanya,Perkenalkan nama saya AWALSAPUTRA. Website ini berfungsi sebagai media personal branding dan simulasi profesional dalam dunia startup dan bisnis digital</p>
+                <a href="#contact" class="cta-button">HUBUNGI SAYA</a>
+            </div>
+
+            <div class="slider-container">
+                <div class="slide active">
+                    <img src="awal.png" alt="Design workspace">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTANG SAYA -->
+    <section id="services" class="section-services">
+        <div class="services-container">
+            <h2 class="section-title">TENTANG SAYA</h2>
+
+            <div class="services-grid">
+
+                <!-- BIODATA -->
+                <div class="service-card">
+                    <div class="service-number">.01</div>
+                    <h3>BIODATA</h3>
+                    <p>
+                        NAMA : AWAL SAPUTRA <br>
+                        TEMPAT/TANGGAL LAHIR : TANGERANG, 08 AGUSTUS 2002 <br>  
+                        JENIS KELAMIN : LAKI - LAKI <br>    
+                        AGAMA : ISLAM<br>
+                        ALAMAT : JL.WARNASARI 2 NO.40 RT.005/02 KELURAHAN SUKASARI KECAMATAN TANGERANG KOTA TANGERANG
+                    </p>
+                </div>
+
+                <!-- PENDIDIKAN -->
+                <div class="service-card">
+                    <div class="service-number">.02</div>
+                    <h3>PENDIDIKAN</h3>
+                    <p>
+                        SEKOLAH DASAR NEGERI TANGERANG 2 : 2008 - 2014 <br>
+                        SEKOLAH MENENGAH PERTAMA NEGERI 17 TANGERANG : 2014 - 2017 <br>
+                        SEKOLAH MENENGAH KEJURUAN LAB BUSINESS SCHOOL TANGERANG : 2018 - 2021 <br> 
+                    </p>
+                </div>
+
+                <!-- MINAT -->
+                <div class="service-card">
+                    <div class="service-number">.03</div>
+                    <h3>MINAT DAN KEAHLIAN</h3>
+                    <p>
+                        1.  GAME E SPORT<br>
+                        2. FUTSAL <br>
+                        3. BILIARD   <br>
+                        4. TRAVELING
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section-portfolio">  
+        <div class="portfolio-container">
+            <h2 class="section-title">SKILL (KEMAMPUAN) </h2>
+
+            <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="design.jpg" alt="">
+            <div class="portfolio-label">
+                <h3>Design Grafis</h3>
+                <p>Web Design & Development</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="data analisis.jpg" alt="">
+            <div class="portfolio-label">
+                <h3>Analisis Data</h3>
+                <p>Branding & Identity</p>
+            </div>
+        </div>
+
+        <!-- TAMBAHAN 1 -->
+        <div class="portfolio-item">
+            <img src="pemograman.jpg" alt="">
+            <div class="portfolio-label">
+                <h3>Pemrograman</h3>
+                <p>HTML, CSS, JavaScript</p>
+            </div>
+        </div>
+
+        <!-- TAMBAHAN 2 -->
+        <div class="portfolio-item">
+            <img src="digital marketing.jpeg" alt="">
+            <div class="portfolio-label">
+                <h3>Digital Marketing</h3>
+                <p>Social Media & Branding</p>
+            </div>
+        </div>
     </div>
-    <div class="cart-icon">
-        🛒 <span id="cart-count">0</span>
+        </div>
+    </section>
+
+   <section id="about" class="section-about">
+    <h2 class="section-title">PORTOFOLIO PROJECT</h2>
+
+    <div class="portfolio-grid">
+
+        <div class="portfolio-item">
+            <img src="awalsnack.png" alt="">
+            <div class="portfolio-label">
+                <h3>Membuat Website E-Commerce</h3>
+                <p>Website ini bisa digunakan untuk simulasi jual beli online </p>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="bms.jfif" alt="">
+            <div class="portfolio-label">
+                <h3>Bussines Model Canvas</h3>
+                <p>menggambarkan model bisnis secara sederhana dalam 1 halaman. Biasanya dipakai untuk startup, bisnis digital, atau usaha kecil biar jelas arah bisnisnya.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="analisis awal snack.png" alt="">
+            <div class="portfolio-label">
+                <h3>Analisis Data</h3>
+                <p>Menganalisis data penjualan untuk menentukan tren grafik penjualan</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <img src="ceminal.jpeg" alt="">
+            <div class="portfolio-label">
+                <h3>Sosial Digital Marketing</h3>
+                <p>Project ini berfokus pada kegiatan memasarkan produk cemilan secara online dan offline dengan strategi digital marketing untuk meningkatkan penjualan dan brand awareness. </p>
+            </div>
+        </div>
+
     </div>
-</header>
+</section>
 
-<main>
+    <!-- CONTACT -->
+    <section id="contact" class="section-contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>KONTAK SAYA</h3>
 
-    <!-- ABOUT -->
-    <section class="about">
-        <h2>Tentang Awal Snack</h2>
-        <p>
-            Awal Snack adalah usaha UMKM yang bergerak di bidang cemilan kekinian dengan
-            cita rasa enak, higienis, dan harga terjangkau. Produk kami dibuat dari bahan
-            berkualitas dan cocok untuk semua kalangan.
-        </p>
-        <p>
-            Website ini dikembangkan sebagai media informasi dan penjualan online sekaligus
-            sarana untuk memperkenalkan profil usaha Awal Snack kepada calon investor.
-        </p>
+                <div class="contact-details">
+
+                    <div class="contact-item">
+                        <label>Email</label><br>
+                        <a href="saputraawal100@gmail.com">
+                            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        <label>WhatsApp</label><br>
+                        <a href="https://wa.me/6285773484653" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        <label>Instagram</label><br>
+                        <a href="https://instagram.com/awalsaputra_08" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- PRODUK (TANPA JUDUL) -->
-    <section id="products" class="product-list">
-    </section>
+    </main>
 
-    <!-- CART -->
-    <section id="cart-section" class="cart-section hidden">
-        <h2>Keranjang Belanja</h2>
-        <ul id="cart-items"></ul>
-        <p class="total">Total: Rp <span id="cart-total">0</span></p>
-        <button id="checkout-btn">Lanjut ke Pembayaran</button>
-    </section>
+    <footer>
+        <p>&copy; 2026 Creative Studio</p>
+    </footer>
 
-    <!-- PAYMENT -->
-    <section id="payment-section" class="payment-section hidden">
-        <h2>Form Pembayaran</h2>
-        <form id="payment-form">
-            <label>Nama Lengkap:</label>
-            <input type="text" id="name" required>
+    <script src="tooplate-graphite-script.js"></script>
 
-            <label>Alamat Pengiriman:</label>
-            <textarea id="address" required></textarea>
-
-            <label>Metode Pembayaran:</label>
-            <select id="payment-method">
-                <option value="transfer">Transfer Bank</option>
-                <option value="ewallet">E-Wallet</option>
-                <option value="cod">Cash on Delivery (COD)</option>
-            </select>
-
-            <button type="submit">Bayar Sekarang</button>
-        </form>
-        <p id="payment-success" class="hidden success-msg">
-            ✅ Pembayaran Berhasil! Terima kasih telah berbelanja 🍪
-        </p>
-    </section>
-
-</main>
-
-<footer>
-    <p>© 2025 Awal Snack – Cemilan Kekinian UMKM Indonesia</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
-
+    </body>
+    </html>
